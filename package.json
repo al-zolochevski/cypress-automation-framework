@@ -1,0 +1,34 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "open-cy": "npx cypress open",
+    "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-headed": "npx cypress run --headed",
+    "triggerAllTests-chrome": "npx cypress run --browser chrome",
+    "triggerAllTests-dashboard": "npx cypress run --record --key a3f4e029-49e3-4eed-927a-04c466dbaa3d",
+    "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
+    "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
+    "delete-junit-results": "rm -rf cypress/results/junit/* || true",
+    "delete-results": "rm -rf cypress/results/junit/* || true",
+    "mochawesome-merge": "npx mochaawesome-merge cypress/results/mochawesome/*.json > mochaesome.json && npx merge mochawesome.json",
+    "delete-mochawesome-report": "rm -rf mochawesome/* || true",
+    "cypress-regression-pack": "npm run delete-results && npm delete-mochawesome-report && npm run triggerAllTests-headless && npm run mochawesome-merge"
+  },
+  "author": "Alex Zolochevskyi",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.12.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-plugin-retries": "^1.5.2",
+    "cypress-xpath": "^1.6.2",
+    "mocha": "^9.0.2",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "baseUrl": "http://www.webdriveruniversity.com",
+  "chromeWebSecurity": false,
+  "viewportHeight": 1080,
+  "vieportWidth": 1920,
+  "env": {
+    "webdriveruni_homepage": "http://www.webdriveruniversity.com",
+    "first_name": "Sarah"
+  },
+  "projectId": "k6wqve",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
+}

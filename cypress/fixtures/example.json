@@ -1,0 +1,8 @@
+{
+  "name": "Using fixtures to represent data",
+  "email": "joe_blogs@webdriveruni.com",
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "firstName": "Joe",
+  "lastName": "blogs",
+  "comment": "Loreem ipsum dolor sit amet"
+}

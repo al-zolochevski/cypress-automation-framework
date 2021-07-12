@@ -1,0 +1,6 @@
+{
+    "baseUrl": "http://staging.automationteststore.com/",
+    "env": {
+        "name": "Joe Blogs"
+    }
+}

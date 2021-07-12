@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0000" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2021-07-09T13:14:15" tests="0" file="cypress\integration\automation-test-store\alias-invoke.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Alais and invoke" timestamp="2021-07-09T13:14:15" tests="1" time="0.0000" failures="1">
+    <testcase name="Alais and invoke Calculate total of normal and sal e products" time="0.0000" classname="Calculate total of normal and sal e products">
+      <failure message="expected 640.7 to equal 648" type="AssertionError"><![CDATA[AssertionError: expected 640.7 to equal 648
+    at Context.eval (https://automationteststore.com/__cypress/tests?p=cypress\integration\automation-test-store\alias-invoke.js:54:29)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
