@@ -11,6 +11,7 @@ describe('Alais and invoke', () => {
         cy.get('.fixed_wrapper .prdocutname').eq(0).invoke('text').as('productBlock')
         cy.get('@productBlock').its('length').should('be.gt', 5)
         cy.get('@productBlock').should('include', 'Seaweed Conditioner')
+        //test
     });
 
     it('Validate product thumbnail', () => {

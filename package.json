@@ -9,13 +9,16 @@
     "triggerAllTests-headed": "npx cypress run --headed",
     "triggerAllTests-chrome": "npx cypress run --browser chrome",
     "triggerAllTests-dashboard": "npx cypress run --record --key a3f4e029-49e3-4eed-927a-04c466dbaa3d",
+    "triggerAllTests-autostore": "npx cypress run --spec cypress/integration/automation-test-store/*",
+    "triggerAllTests-autostore-dashboard": "npx cypress run --spec cypress/integration/automation-test-store/* --record --key a3f4e029-49e3-4eed-927a-04c466dbaa3d",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
     "delete-junit-results": "rm -rf cypress/results/junit/* || true",
     "delete-results": "rm -rf cypress/results/junit/* || true",
     "mochawesome-merge": "npx mochaawesome-merge cypress/results/mochawesome/*.json > mochaesome.json && npx merge mochawesome.json",
     "delete-mochawesome-report": "rm -rf mochawesome/* || true",
-    "cypress-regression-pack": "npm run delete-results && npm delete-mochawesome-report && npm run triggerAllTests-headless && npm run mochawesome-merge"
+    "cypress-regression-pack": "npm run delete-results && npm delete-mochawesome-report && npm run triggerAllTests-headless && npm run mochawesome-merge",
+    "cypress-multi-browser": "npm run triggerAllTests-autostore -- --browser electron --headed & npm run triggerAllTests-autostore -- --browser edge --headed"
   },
   "author": "Alex Zolochevskyi",
   "license": "ISC",
