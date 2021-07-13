@@ -4,7 +4,7 @@ class AutoStoreHairCare_PO {
         globalThis.data.productName.forEach(function (element) {
             cy.addProductToBasket(element)
         })
-        cy.get('.dropdown-toggle .fa-shopping-cart').click();
+        cy.get('.dropdown-toggle .fa-shopping-cart').click({ force: true });
     }
 }
 

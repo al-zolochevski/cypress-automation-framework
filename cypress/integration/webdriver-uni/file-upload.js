@@ -4,7 +4,7 @@ describe('Test file upload', () => {
 
     beforeEach(() => {
         cy.visit('http://webdriveruniversity.com/');
-        cy.get('#file-upload').invoke('removeAttr', 'target').click();
+        cy.get('#file-upload').invoke('removeAttr', 'target').click({ force: true });
     })
 
 

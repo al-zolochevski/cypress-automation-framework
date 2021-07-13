@@ -3,7 +3,7 @@
 describe('Verify radiobuttons', () => {
     before(() => {
         cy.visit('http://webdriveruniversity.com');
-        cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click();
+        cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({ force: true });
     })
     it('Check radiobuttons', () => {
         //Solution by author of the course

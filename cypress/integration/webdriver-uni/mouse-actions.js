@@ -3,7 +3,7 @@
 describe("Test mouse actions", () => {
     it("Scroll element into view", () => {
         cy.visit('http://webdriveruniversity.com');
-        cy.get('#actions').scrollIntoView().invoke('removeAttr', 'target').click();
+        cy.get('#actions').scrollIntoView().invoke('removeAttr', 'target').click({ force: true });
     })
 
     it("I should be able to drag and drop a draggable item", () => {
@@ -16,7 +16,7 @@ describe("Test mouse actions", () => {
 
     it("Double click", () => {
         cy.visit('http://webdriveruniversity.com');
-        cy.get('#actions').scrollIntoView().invoke('removeAttr', 'target').click();
+        cy.get('#actions').scrollIntoView().invoke('removeAttr', 'target').click({ force: true });
 
         //author vision
         // cy.get('#double-click').dblclick();
@@ -28,9 +28,9 @@ describe("Test mouse actions", () => {
 
     it.only("Holddown the left mouse click button", () => {
         cy.visit('http://webdriveruniversity.com');
-        cy.get('#actions').scrollIntoView().invoke('removeAttr', 'target').click();
+        cy.get('#actions').scrollIntoView().invoke('removeAttr', 'target').click({ force: true });
 
-        cy.get('#click-box').trigger('mousedown', {which: 1}).then(($element) => {
+        cy.get('#click-box').trigger('mousedown', { which: 1 }).then(($element) => {
             expect($element).to.have.css('background-color', 'rgb(0, 255, 0)')
             expect($element).to.have.text('Well done! keep holding that click now.....')
         })

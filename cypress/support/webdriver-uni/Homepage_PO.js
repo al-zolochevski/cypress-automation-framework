@@ -5,7 +5,7 @@ class HomePage_PO {
     }
 
     clickOnContactUsSection() {
-        cy.get("#contact-us").invoke("removeAttr", "target").click();
+        cy.get("#contact-us").invoke("removeAttr", "target").click({ force: true });
     }
 }
 
